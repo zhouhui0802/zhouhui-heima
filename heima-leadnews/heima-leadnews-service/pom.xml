@@ -8,13 +8,20 @@
     </parent>
 
     <artifactId>heima-leadnews-service</artifactId>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <name>heima-leadnews-service</name>
     <url>http://maven.apache.org</url>
+    <modules>
+        <module>heima-leadnews-user</module>
+    </modules>
+
+
+
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
     </properties>
 
     <dependencies>
@@ -27,6 +34,7 @@
             <groupId>com.heima</groupId>
             <artifactId>heima-leadnews-common</artifactId>
         </dependency>
+
         <dependency>
             <groupId>com.heima</groupId>
             <artifactId>heima-leadnews-feign-api</artifactId>
@@ -44,10 +52,22 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+ <!--           <exclusions>
+                <exclusion>
+                    <groupId>com.alibaba.nacos</groupId>
+                    <artifactId>nacos-client</artifactId>
+                </exclusion>
+            </exclusions>-->
         </dependency>
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
+<!--        &lt;!&ndash; 显式覆盖 nacos-client 版本 &ndash;&gt;
+        <dependency>
+            <groupId>com.alibaba.nacos</groupId>
+            <artifactId>nacos-client</artifactId>
+            <version>1.4.0</version> &lt;!&ndash; 降级到与 Server 匹配的 1.4.0 &ndash;&gt;
+        </dependency>-->
     </dependencies>
 </project>

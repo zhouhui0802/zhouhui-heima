@@ -1,0 +1,27 @@
+server:
+  port: 51801
+spring:
+  application:
+    name: leadnews-user
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/leadnews_user?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        # 强制使用 HTTP 协议（避免 gRPC 协议兼容问题）
+        metadata:
+          nacos.remote.client.type: http
+      config:
+        server-addr: 127.0.0.1:8848
+        # 强制使用 HTTP 协议（避免 gRPC 协议兼容问题）
+        metadata:
+          nacos.remote.client.type: http
+        file-extension: yml
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.xml
+  # 设置别名包扫描路径，通过该属性可以给包中的类注册别名
+  type-aliases-package: com.heima.model.user.pojos

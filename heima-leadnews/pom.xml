@@ -38,6 +38,7 @@
     <spring.boot.version>2.3.9.RELEASE</spring.boot.version>
     <spring.cloud.version>Hoxton.SR10</spring.cloud.version>
     <com.alibaba.cloud>2.2.8.RELEASE</com.alibaba.cloud>
+    <nacos.version>1.4.0</nacos.version>
     <mybatis.version>3.5.1</mybatis.version>
     <mybatis.spring.version>2.0.1</mybatis.spring.version>
     <mybatis.plus.version>3.4.3.4</mybatis.plus.version>
