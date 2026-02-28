@@ -3,6 +3,7 @@ package com.heima.wemedia.gateway.filter;
 
 import com.heima.wemedia.gateway.util.AppJwtUtil;
 import io.jsonwebtoken.Claims;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
@@ -10,6 +11,7 @@ import org.springframework.core.Ordered;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.http.server.reactive.ServerHttpResponse;
+import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
@@ -19,6 +21,8 @@ import reactor.core.publisher.Mono;
  * @description TODO
  * @date 2026/2/27 16:54
  */
+@Component
+@Slf4j
 public class AuthorizeFilter implements Ordered, GlobalFilter {
 
 
