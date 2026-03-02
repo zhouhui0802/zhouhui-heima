@@ -20,9 +20,25 @@ mybatis-plus:
   mapper-locations: classpath*:mapper/*.xml
   # 设置别名包扫描路径，通过该属性可以给包中的类注册别名
   type-aliases-package: com.heima.model.media.pojos
+  global-config:
+    db-config:
+      id-type: assign_id #全局配置
 minio:
   accessKey: minioadmin
   secretKey: minioadmin
   bucket: bucket
   endpoint: http://127.0.0.1:9000
   readPath: http://127.0.0.1:9000
+aliyun:
+  accessKeyId: yourKey
+  secret: yourSecret
+  #aliyun.scenes=porn,terrorism,ad,qrcode,live,logo
+  scenes: terrorism
+feign:
+  hystrix:
+    enabled: true # 开启feign对hystrix熔断降级的支持
+  client:
+    config:
+      default:
+        connect-timeout: 2000
+        read-timeout: 2000
