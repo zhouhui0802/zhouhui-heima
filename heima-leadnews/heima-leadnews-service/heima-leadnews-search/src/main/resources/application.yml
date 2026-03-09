@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: leadnews-search # 服务名称
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yml
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092
+    consumer:
+      group-id: ${spring.application.name}
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+  data:
+    mongodb:
+      host: 127.0.0.1
+      port: 27017
+      database: leadnews-history
+elasticsearch:
+  host: 127.0.0.1
+  port: 9200

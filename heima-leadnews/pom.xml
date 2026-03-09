@@ -17,8 +17,13 @@
     <module>heima-leadnews-gateway</module>
     <module>heima-leadnews-service</module>
     <module>heima-leadnews-test</module>
-      <module>heima-file-starter</module>
+    <module>heima-file-starter</module>
     <module>heima-leadnews-basic</module>
+    <module>heima-leadnews-test/heima-test-OCR</module>
+    <module>heima-leadnews-schedule</module>
+      <module>heima-leadnews-service/heima-leadnews-search</module>
+    <module>heima-es-spring-boot-starter</module>
+      <module>heima-leadnews-test/heima-mongodb-test</module>
   </modules>
 
   <!-- 继承Spring boot工程 -->

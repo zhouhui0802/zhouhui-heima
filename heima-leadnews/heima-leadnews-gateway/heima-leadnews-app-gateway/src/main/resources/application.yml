@@ -38,3 +38,10 @@ spring:
             - Path=/article/**
           filters:
             - StripPrefix= 1
+        #搜索微服务
+        - id: leadnews-search
+          uri: lb://leadnews-search
+          predicates:
+            - Path=/search/**
+          filters:
+            - StripPrefix= 1

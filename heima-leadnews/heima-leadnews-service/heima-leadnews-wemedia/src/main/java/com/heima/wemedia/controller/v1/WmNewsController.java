@@ -44,4 +44,9 @@ public class WmNewsController {
         wmNewsAutoScanService.autoScanWmNews(wmNewsDto.getId());
         return ResponseResult.okResult(AppHttpCodeEnum.SUCCESS);
     }
+
+    @PostMapping("/down_or_up")
+    public ResponseResult downOrUp(@RequestBody WmNewsDto dto){
+        return wmNewsService.downOrUp(dto);
+    }
 }
